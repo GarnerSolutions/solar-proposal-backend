@@ -2,7 +2,7 @@ const { google } = require('googleapis');
 const path = require('path');
 const fs = require('fs');
 
-const credentials = require('./credentials.json');
+const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 
 const SCOPES = ['https://www.googleapis.com/auth/presentations', 'https://www.googleapis.com/auth/drive'];
 const auth = new google.auth.GoogleAuth({
